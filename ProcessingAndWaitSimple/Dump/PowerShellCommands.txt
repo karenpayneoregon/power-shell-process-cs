@@ -1,0 +1,39 @@
+﻿-----------------------------------------------------
+Variations on what has been presented in code
+-----------------------------------------------------
+
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.1
+
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1#examples
+
+
+Get-EventLog  -LogName "application" -After 3/10/2011 -Before 3/11/2012 -EntryType "Error" -Source "*SQL*" |select -last 100
+
+Get-EventLog -LogName application -After $StartDay | Select-Object Timegenerated, EntryType, Source, Message
+
+(Get-EventLog -LogName application -After $StartDay )[0] | fl * #format-list
+
+
+Get-EventLog -LogName application -After 3/03/2021 | Select-Object Timegenerated, EntryType, Source, Message | Export-Csv   -Path Events.csv
+
+Get-EventLog -Logname Application -entrytype Information | select -First 1 TimeGenerated | gm
+
+Get-EventLog -LogName application -After 3/03/2021 | Select-Object -First 1 Timegenerated, EntryType, Source, Message | ConvertTo-Json
+
+Get-EventLog -LogName application -After 3/03/2021 | Select-Object -First 1 [datetime]Timegenerated, EntryType, Source, Message | ConvertTo-Json
+
+
+10 Examples to Check Event Log on Local and Remote Computer Using PowerShell
+https://www.nextofwindows.com/10-examples-to-check-event-log-on-local-and-remote-computer-using-powershell
+
+With Select-Object
+Get-ChildItem "Cert:\LocalMachine\My" | Select-Object Name,Thumbprint,@{Name="Template";Expression={Get-CertificateTemplate $_}}
+
+
+Tree $Path /F | Select-Object -Skip 2  
+Tree $Path /F | Select-Object -Skip 1 >test.txt
+
+Tree C:\OED\Dotnetland\VS2019\PowerShellSolution /F | Select-Object -Skip 2 >test.txt
+
+Get-ChildItem C:\OED\Dotnetland\VS2019\PowerShellSolution -recurse  | ConvertTo-csv  >test.csv
+Get-ChildItem C:\OED\Dotnetland\VS2019\PowerShellSolution -recurse -Depth 2 -Attributes !Directory,!Directory+Hidden -Name | ConvertTo-csv  >test.csv

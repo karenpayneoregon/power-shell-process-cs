@@ -1,0 +1,118 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using ProcessingAndWait.Classes.Containers;
+
+namespace ProcessingAndWait.Classes
+{
+    /// <summary>
+    /// Uses Newtonsoft.Json instead of System.Text.Json as System.Text.Json
+    /// does not handle dates formatted as written with
+    /// 
+    /// Get-EventLog -LogName
+    /// 
+    /// </summary>
+    public class PowerShellOperations1
+    {
+        /// <summary>
+        /// Get event log entries for yesterday onwards
+        /// </summary>
+        /// <returns>List&lt;AppEventItem&gt;</returns>
+        /// <remarks>
+        /// The intent here is too
+        /// * Show that there are alternates to System.Text.Json methods which fail on dates
+        /// * Show that the caller (user interface) remains responsive as in many cases there will be thousands of entries for one day.
+        /// * The following pares down what entries to return
+        ///       Select-Object Category, Timegenerated, EntryType, Source, Message
+        /// * A very short version with different properties: Get-EventLog -LogName System -Newest 10
+        /// </remarks>
+        public static async Task<List<AppEventItem>> GetApplicationEventsAsJson()
+        {
+
+            const string fileName = "Events.csv";
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
+
+            var yesterdayDate = DateTime.Now.AddDays(-1);
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                RedirectStandardOutput = true,
+                Arguments = $"Get-EventLog -LogName application -After {yesterdayDate:d} | Select-Object Category, Timegenerated, EntryType, Source, Message | ConvertTo-Json",
+                CreateNoWindow = true
+            };
+
+            using var process = Process.Start(start);
+
+            // ReSharper disable once PossibleNullReferenceException
+            using var reader = process.StandardOutput;
+
+            process.EnableRaisingEvents = true;
+
+            var fileContents = await reader.ReadToEndAsync();
+
+            await File.WriteAllTextAsync(fileName, fileContents);
+            await process.WaitForExitAsync();
+
+            /*
+             * This line can also be embedded into the DeserializeObject method
+             * Why is not? Because this is clearer code and easier to debug.
+             */
+            var json = await File.ReadAllTextAsync(fileName);
+
+            /*
+             * Read back from file written above
+             */
+            return JsonConvert.DeserializeObject<List<AppEventItem>>(json);
+
+        }
+        /// <summary>
+        /// Get registry information from
+        /// 
+        ///     Hkey_local_Machine\Software\Microsoft\ASP.NET
+        ///
+        /// Done a tad different from the other methods to show running an
+        /// external script.
+        ///
+        /// Note, there may be a temptation to say export Hkey_local_Machine\Software\Microsoft,
+        /// this is a lengthy time consuming process.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns>If file exists with registry data</returns>
+        /// <remarks>
+        /// This will fail if insufficient permissions to the registry 
+        /// </remarks>
+        public static async Task<bool> GetRegistryInformationAsJson(string fileName)
+        {
+            var scriptFileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "runner.ps1");
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+                await Task.Delay(1000);
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                Arguments = $"{scriptFileName}", CreateNoWindow = true
+            };
+
+            using var process = Process.Start(start);
+            await process.WaitForExitAsync();
+
+            return File.Exists(fileName);
+
+        }
+   
+    }
+}
