@@ -39,6 +39,7 @@ namespace ProcessingAndWait.Classes
             if (File.Exists(fileName))
             {
                 File.Delete(fileName);
+
             }
 
             var yesterdayDate = DateTime.Now.AddDays(-1);
@@ -75,6 +76,8 @@ namespace ProcessingAndWait.Classes
             return JsonConvert.DeserializeObject<List<AppEventItem>>(json);
 
         }
+        
+
         /// <summary>
         /// Get registry information from
         /// 
@@ -104,7 +107,8 @@ namespace ProcessingAndWait.Classes
             var start = new ProcessStartInfo
             {
                 FileName = "powershell.exe",
-                Arguments = $"{scriptFileName}", CreateNoWindow = true
+                Arguments = $"{scriptFileName}",
+                CreateNoWindow = true
             };
 
             using var process = Process.Start(start);
@@ -113,6 +117,101 @@ namespace ProcessingAndWait.Classes
             return File.Exists(fileName);
 
         }
-   
+        /// <summary>
+        /// Get time zone information
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Adapted from
+        /// https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-timezone?view=powershell-7.1
+        /// </remarks>
+        public static async Task<TimezoneItem> GetTimeZoneTask()
+        {
+
+            const string fileName = "timezone.json";
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                RedirectStandardOutput = true,
+                Arguments = "Get-TimeZone | ConvertTo-Json",
+                CreateNoWindow = true
+            };
+
+            using var process = Process.Start(start);
+
+            // ReSharper disable once PossibleNullReferenceException
+            using var reader = process.StandardOutput;
+
+            process.EnableRaisingEvents = true;
+
+            var fileContents = await reader.ReadToEndAsync();
+
+            await File.WriteAllTextAsync(fileName, fileContents);
+            await process.WaitForExitAsync();
+
+            /*
+             * This line can also be embedded into the DeserializeObject method
+             * Why is not? Because this is clearer code and easier to debug.
+             */
+            var json = await File.ReadAllTextAsync(fileName);
+
+            /*
+             * Read back from file written above
+             */
+            return JsonConvert.DeserializeObject<TimezoneItem>(json);
+
+        }
+
+        public static async Task<MachineComputerInformation> GetComputerInformationTask()
+        {
+
+            const string fileName = "computerInformation.json";
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                RedirectStandardOutput = true,
+                Arguments = "Get-ComputerInfo | ConvertTo-Json",
+                CreateNoWindow = true
+            };
+
+            using var process = Process.Start(start);
+
+            // ReSharper disable once PossibleNullReferenceException
+            using var reader = process.StandardOutput;
+
+            process.EnableRaisingEvents = true;
+
+            var fileContents = await reader.ReadToEndAsync();
+
+            await File.WriteAllTextAsync(fileName, fileContents);
+            await process.WaitForExitAsync();
+
+            /*
+             * This line can also be embedded into the DeserializeObject method
+             * Why is not? Because this is clearer code and easier to debug.
+             */
+            var json = await File.ReadAllTextAsync(fileName);
+
+            /*
+             * Read back from file written above
+             */
+            return JsonConvert.DeserializeObject<MachineComputerInformation>(json);
+
+        }
+
     }
 }

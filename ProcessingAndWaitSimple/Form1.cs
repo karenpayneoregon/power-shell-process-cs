@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProcessingAndWait.Classes;
 using ProcessingAndWait.Classes.Helpers;
+using ProcessingAndWait.LanguageExtensions;
 using StopWatchLibrary;
 
 namespace ProcessingAndWait
@@ -189,6 +190,7 @@ namespace ProcessingAndWait
         /// <param name="e"></param>
         private async void RunScriptButton_Click(object sender, EventArgs e)
         {
+
             const string fileName = "regFile.txt";
             var results = await PowerShellOperations1.GetRegistryInformationAsJson(fileName);
             if (results)
@@ -202,7 +204,28 @@ namespace ProcessingAndWait
             }
 
         }
-    }
+        /// <summary>
+        /// Get time zone information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void TimeZoneButton_Click(object sender, EventArgs e)
+        {
+            var timeZone = await PowerShellOperations1.GetTimeZoneTask();
+            MessageBox.Show($"{timeZone.StandardName}\nSupports daylight savings {timeZone.SupportsDaylightSavingTime.ToYesNoString()}");
+        }
 
-   
+        /// <summary>
+        /// Get computer information
+        /// Note OsUpTime has a ToString override
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void ComputerInformationButton_Click(object sender, EventArgs e)
+        {
+            var details = await PowerShellOperations1.GetComputerInformationTask();
+
+            MessageBox.Show($"Up time\n{details.OsUptime}");
+        }
+    }
 }
