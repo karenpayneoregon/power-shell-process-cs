@@ -44,3 +44,7 @@ View menu, `Terminal` you can run PS commands too.
 # Getting Started with the PowerShell Gallery
 
 The [PowerShell Gallery](https://docs.microsoft.com/en-us/powershell/scripting/gallery/getting-started?view=powershell-7.1) is a package repository containing scripts, modules, and DSC resources you can download and leverage. You use the cmdlets in the PowerShellGet module to install packages from the PowerShell Gallery. You do not need to sign in to download items from the PowerShell Gallery.
+
+# IntelliSense and documentation
+
+![screen](ProcessingAndWaitSimple/assets/document.png)
