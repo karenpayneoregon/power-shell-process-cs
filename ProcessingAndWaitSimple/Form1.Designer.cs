@@ -49,11 +49,17 @@ namespace ProcessingAndWait
             this.ComputerInformationButton = new System.Windows.Forms.Button();
             this.OpenExecutableFolder = new System.Windows.Forms.Button();
             this.FilesListBox = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AddressFamilyButton = new System.Windows.Forms.Button();
+            this.FamilyListBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GetIpAddressVersion1Button
             // 
+            this.GetIpAddressVersion1Button.Image = ((System.Drawing.Image)(resources.GetObject("GetIpAddressVersion1Button.Image")));
+            this.GetIpAddressVersion1Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GetIpAddressVersion1Button.Location = new System.Drawing.Point(12, 26);
             this.GetIpAddressVersion1Button.Name = "GetIpAddressVersion1Button";
             this.GetIpAddressVersion1Button.Size = new System.Drawing.Size(177, 23);
@@ -64,6 +70,8 @@ namespace ProcessingAndWait
             // 
             // GetIpAddressVersion2Button
             // 
+            this.GetIpAddressVersion2Button.Image = ((System.Drawing.Image)(resources.GetObject("GetIpAddressVersion2Button.Image")));
+            this.GetIpAddressVersion2Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GetIpAddressVersion2Button.Location = new System.Drawing.Point(12, 55);
             this.GetIpAddressVersion2Button.Name = "GetIpAddressVersion2Button";
             this.GetIpAddressVersion2Button.Size = new System.Drawing.Size(177, 23);
@@ -74,34 +82,40 @@ namespace ProcessingAndWait
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.FamilyListBox);
+            this.groupBox1.Controls.Add(this.AddressFamilyButton);
             this.groupBox1.Controls.Add(this.IpAddressTextBox2);
             this.groupBox1.Controls.Add(this.IpAddressTextBox1);
             this.groupBox1.Controls.Add(this.GetIpAddressVersion2Button);
             this.groupBox1.Controls.Add(this.GetIpAddressVersion1Button);
-            this.groupBox1.Location = new System.Drawing.Point(21, 84);
+            this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 95);
+            this.groupBox1.Size = new System.Drawing.Size(375, 190);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Get IP Address";
             // 
             // IpAddressTextBox2
             // 
-            this.IpAddressTextBox2.Location = new System.Drawing.Point(195, 55);
+            this.IpAddressTextBox2.Location = new System.Drawing.Point(198, 55);
             this.IpAddressTextBox2.Name = "IpAddressTextBox2";
+            this.IpAddressTextBox2.PlaceholderText = "This computers ip";
             this.IpAddressTextBox2.Size = new System.Drawing.Size(152, 23);
             this.IpAddressTextBox2.TabIndex = 3;
             // 
             // IpAddressTextBox1
             // 
-            this.IpAddressTextBox1.Location = new System.Drawing.Point(195, 26);
+            this.IpAddressTextBox1.Location = new System.Drawing.Point(198, 26);
             this.IpAddressTextBox1.Name = "IpAddressTextBox1";
+            this.IpAddressTextBox1.PlaceholderText = "This computers ip";
             this.IpAddressTextBox1.Size = new System.Drawing.Size(152, 23);
             this.IpAddressTextBox1.TabIndex = 2;
             // 
             // GetApplicationEventsJsonButton
             // 
-            this.GetApplicationEventsJsonButton.Location = new System.Drawing.Point(35, 188);
+            this.GetApplicationEventsJsonButton.Image = ((System.Drawing.Image)(resources.GetObject("GetApplicationEventsJsonButton.Image")));
+            this.GetApplicationEventsJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GetApplicationEventsJsonButton.Location = new System.Drawing.Point(408, 49);
             this.GetApplicationEventsJsonButton.Name = "GetApplicationEventsJsonButton";
             this.GetApplicationEventsJsonButton.Size = new System.Drawing.Size(175, 23);
             this.GetApplicationEventsJsonButton.TabIndex = 4;
@@ -111,9 +125,11 @@ namespace ProcessingAndWait
             // 
             // GetServicesHtmlButton
             // 
-            this.GetServicesHtmlButton.Location = new System.Drawing.Point(327, 226);
+            this.GetServicesHtmlButton.Image = ((System.Drawing.Image)(resources.GetObject("GetServicesHtmlButton.Image")));
+            this.GetServicesHtmlButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GetServicesHtmlButton.Location = new System.Drawing.Point(208, 49);
             this.GetServicesHtmlButton.Name = "GetServicesHtmlButton";
-            this.GetServicesHtmlButton.Size = new System.Drawing.Size(175, 23);
+            this.GetServicesHtmlButton.Size = new System.Drawing.Size(177, 23);
             this.GetServicesHtmlButton.TabIndex = 4;
             this.GetServicesHtmlButton.Text = "Get services as html";
             this.GetServicesHtmlButton.UseVisualStyleBackColor = true;
@@ -121,7 +137,9 @@ namespace ProcessingAndWait
             // 
             // GetServicesAsJsonButton
             // 
-            this.GetServicesAsJsonButton.Location = new System.Drawing.Point(35, 227);
+            this.GetServicesAsJsonButton.Image = ((System.Drawing.Image)(resources.GetObject("GetServicesAsJsonButton.Image")));
+            this.GetServicesAsJsonButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GetServicesAsJsonButton.Location = new System.Drawing.Point(408, 20);
             this.GetServicesAsJsonButton.Name = "GetServicesAsJsonButton";
             this.GetServicesAsJsonButton.Size = new System.Drawing.Size(175, 23);
             this.GetServicesAsJsonButton.TabIndex = 3;
@@ -141,10 +159,10 @@ namespace ProcessingAndWait
             this.ServicesListView.FullRowSelect = true;
             this.ServicesListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ServicesListView.HideSelection = false;
-            this.ServicesListView.Location = new System.Drawing.Point(35, 290);
+            this.ServicesListView.Location = new System.Drawing.Point(12, 290);
             this.ServicesListView.MultiSelect = false;
             this.ServicesListView.Name = "ServicesListView";
-            this.ServicesListView.Size = new System.Drawing.Size(877, 326);
+            this.ServicesListView.Size = new System.Drawing.Size(900, 326);
             this.ServicesListView.TabIndex = 4;
             this.ServicesListView.UseCompatibleStateImageBehavior = false;
             this.ServicesListView.View = System.Windows.Forms.View.Details;
@@ -167,7 +185,7 @@ namespace ProcessingAndWait
             // ServiceCountLabel
             // 
             this.ServiceCountLabel.AutoSize = true;
-            this.ServiceCountLabel.Location = new System.Drawing.Point(219, 230);
+            this.ServiceCountLabel.Location = new System.Drawing.Point(592, 23);
             this.ServiceCountLabel.Name = "ServiceCountLabel";
             this.ServiceCountLabel.Size = new System.Drawing.Size(40, 15);
             this.ServiceCountLabel.TabIndex = 5;
@@ -175,14 +193,16 @@ namespace ProcessingAndWait
             // 
             // JsonTimeTextBox
             // 
-            this.JsonTimeTextBox.Location = new System.Drawing.Point(219, 188);
+            this.JsonTimeTextBox.Location = new System.Drawing.Point(592, 49);
             this.JsonTimeTextBox.Name = "JsonTimeTextBox";
-            this.JsonTimeTextBox.Size = new System.Drawing.Size(152, 23);
+            this.JsonTimeTextBox.Size = new System.Drawing.Size(92, 23);
             this.JsonTimeTextBox.TabIndex = 4;
             // 
             // RunScriptButton
             // 
-            this.RunScriptButton.Location = new System.Drawing.Point(33, 20);
+            this.RunScriptButton.Image = ((System.Drawing.Image)(resources.GetObject("RunScriptButton.Image")));
+            this.RunScriptButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RunScriptButton.Location = new System.Drawing.Point(12, 20);
             this.RunScriptButton.Name = "RunScriptButton";
             this.RunScriptButton.Size = new System.Drawing.Size(177, 23);
             this.RunScriptButton.TabIndex = 4;
@@ -192,7 +212,9 @@ namespace ProcessingAndWait
             // 
             // TimeZoneButton
             // 
-            this.TimeZoneButton.Location = new System.Drawing.Point(216, 20);
+            this.TimeZoneButton.Image = ((System.Drawing.Image)(resources.GetObject("TimeZoneButton.Image")));
+            this.TimeZoneButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TimeZoneButton.Location = new System.Drawing.Point(210, 19);
             this.TimeZoneButton.Name = "TimeZoneButton";
             this.TimeZoneButton.Size = new System.Drawing.Size(177, 23);
             this.TimeZoneButton.TabIndex = 6;
@@ -202,7 +224,9 @@ namespace ProcessingAndWait
             // 
             // ComputerInformationButton
             // 
-            this.ComputerInformationButton.Location = new System.Drawing.Point(35, 49);
+            this.ComputerInformationButton.Image = ((System.Drawing.Image)(resources.GetObject("ComputerInformationButton.Image")));
+            this.ComputerInformationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ComputerInformationButton.Location = new System.Drawing.Point(12, 49);
             this.ComputerInformationButton.Name = "ComputerInformationButton";
             this.ComputerInformationButton.Size = new System.Drawing.Size(177, 23);
             this.ComputerInformationButton.TabIndex = 7;
@@ -213,9 +237,9 @@ namespace ProcessingAndWait
             // OpenExecutableFolder
             // 
             this.OpenExecutableFolder.Image = ((System.Drawing.Image)(resources.GetObject("OpenExecutableFolder.Image")));
-            this.OpenExecutableFolder.Location = new System.Drawing.Point(452, 19);
+            this.OpenExecutableFolder.Location = new System.Drawing.Point(690, 254);
             this.OpenExecutableFolder.Name = "OpenExecutableFolder";
-            this.OpenExecutableFolder.Size = new System.Drawing.Size(49, 23);
+            this.OpenExecutableFolder.Size = new System.Drawing.Size(213, 23);
             this.OpenExecutableFolder.TabIndex = 8;
             this.OpenExecutableFolder.UseVisualStyleBackColor = true;
             this.OpenExecutableFolder.Click += new System.EventHandler(this.OpenExecutableFolder_Click);
@@ -229,11 +253,43 @@ namespace ProcessingAndWait
             this.FilesListBox.Size = new System.Drawing.Size(213, 229);
             this.FilesListBox.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(668, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // AddressFamilyButton
+            // 
+            this.AddressFamilyButton.Image = ((System.Drawing.Image)(resources.GetObject("AddressFamilyButton.Image")));
+            this.AddressFamilyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddressFamilyButton.Location = new System.Drawing.Point(12, 84);
+            this.AddressFamilyButton.Name = "AddressFamilyButton";
+            this.AddressFamilyButton.Size = new System.Drawing.Size(177, 23);
+            this.AddressFamilyButton.TabIndex = 4;
+            this.AddressFamilyButton.Text = "Address family";
+            this.AddressFamilyButton.UseVisualStyleBackColor = true;
+            this.AddressFamilyButton.Click += new System.EventHandler(this.AddressFamilyButton_Click);
+            // 
+            // FamilyListBox
+            // 
+            this.FamilyListBox.FormattingEnabled = true;
+            this.FamilyListBox.ItemHeight = 15;
+            this.FamilyListBox.Location = new System.Drawing.Point(198, 84);
+            this.FamilyListBox.Name = "FamilyListBox";
+            this.FamilyListBox.Size = new System.Drawing.Size(152, 94);
+            this.FamilyListBox.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 628);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.FilesListBox);
             this.Controls.Add(this.OpenExecutableFolder);
             this.Controls.Add(this.ComputerInformationButton);
@@ -253,6 +309,7 @@ namespace ProcessingAndWait
             this.Text = "Process run code samples";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +336,9 @@ namespace ProcessingAndWait
         private System.Windows.Forms.Button ComputerInformationButton;
         private System.Windows.Forms.Button OpenExecutableFolder;
         private System.Windows.Forms.ListBox FilesListBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button AddressFamilyButton;
+        private System.Windows.Forms.ListBox FamilyListBox;
     }
 }
 

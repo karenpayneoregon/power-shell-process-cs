@@ -135,6 +135,43 @@ namespace ProcessingAndWait.Classes
 
         }
         /// <summary>
+        /// Get list of IP Addresses
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<List<AddressFamily>> GetAddressFamilyContainerAsJson()
+        {
+            const string fileName = "addressFamily.txt";
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                Arguments = "Get-NetIPAddress -AddressFamily IPv4 | select IPaddress,Interface*  | ConvertTo-Json",
+                CreateNoWindow = true
+            };
+
+            using var process = Process.Start(start);
+            using var reader = process.StandardOutput;
+
+            process.EnableRaisingEvents = true;
+
+            var fileContents = await reader.ReadToEndAsync();
+
+            await File.WriteAllTextAsync(fileName, fileContents);
+            await process.WaitForExitAsync();
+
+            var json = await File.ReadAllTextAsync(fileName);
+
+            return JsonSerializer.Deserialize<List<AddressFamily>>(json);
+
+        }
+        /// <summary>
         /// Get event log details after a specified date. Since Get-EventLog formats dates
         /// unconventionally the Microsoft deserializer will blow up on the dates so we
         /// need to use 

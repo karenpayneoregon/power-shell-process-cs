@@ -81,6 +81,16 @@ namespace ProcessingAndWait
             {
                 IpAddressTextBox2.Text = "Failed to obtain IP address";
             }
+
+            
+        }
+        private async void AddressFamilyButton_Click(object sender, EventArgs e)
+        {
+            
+            FamilyListBox.DataSource = null;
+            var families = await PowerShellOperations.GetAddressFamilyContainerAsJson();
+            FamilyListBox.DataSource = families;
+            
         }
 
         /// <summary>
@@ -233,5 +243,7 @@ namespace ProcessingAndWait
         {
             FileHelpers.OpenExecutableFolder();
         }
+
+
     }
 }

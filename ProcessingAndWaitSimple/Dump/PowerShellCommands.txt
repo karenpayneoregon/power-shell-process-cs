@@ -1,4 +1,7 @@
-﻿-----------------------------------------------------
+﻿Online docs
+Microsoft.PowerShell.Management https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-7.1
+
+-----------------------------------------------------
 Variations on what has been presented in code
 -----------------------------------------------------
 
@@ -37,3 +40,6 @@ Tree C:\OED\Dotnetland\VS2019\PowerShellSolution /F | Select-Object -Skip 2 >tes
 
 Get-ChildItem C:\OED\Dotnetland\VS2019\PowerShellSolution -recurse  | ConvertTo-csv  >test.csv
 Get-ChildItem C:\OED\Dotnetland\VS2019\PowerShellSolution -recurse -Depth 2 -Attributes !Directory,!Directory+Hidden -Name | ConvertTo-csv  >test.csv
+
+Get-NetIPAddress -AddressFamily IPv4 | where-object IPAddress -notmatch "^(169)|(127)" | Sort-Object IPAddress | select IPaddress,Interface* | ConvertTo-Json
+

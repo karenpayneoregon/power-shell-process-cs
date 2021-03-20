@@ -118,7 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Services_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\Services_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IPAddressControl_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\IPAddressControl_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Summary_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\Summary_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Folder_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FileSystemWatcher_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\FileSystemWatcher_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Script_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\Script_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Time_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\Time_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JSONFile_16x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Dump\JSONFile_16x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
