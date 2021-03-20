@@ -29,9 +29,9 @@ namespace ProcessingAndWait.Classes
         /// Get this computer's IP address synchronous 
         /// </summary>
         /// <returns>Task&lt;string&gt;</returns>
-        public static async Task<string> GetIpAddress()
+        public static async Task<string> GetIpAddressTask()
         {
-            const string fileName = "ipPower.txt";
+            const string fileName = "ipPower_Async.txt";
 
 
             if (File.Exists(fileName))
@@ -65,9 +65,10 @@ namespace ProcessingAndWait.Classes
         /// Get this computer's IP address asynchronous 
         /// </summary>
         /// <returns>Task&lt;string&gt;</returns>        
-        public static async Task<string> GetIpAddresses()
+        public static string GetIpAddressSync()
         {
-            const string fileName = "ipAllPower.txt";
+            const string fileName = "ipPower_Sync.txt";
+
 
             if (File.Exists(fileName))
             {
@@ -79,9 +80,10 @@ namespace ProcessingAndWait.Classes
                 FileName = "powershell.exe",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
-                Arguments = "Get-NetIPAddress | ConvertTo-Json",
+                Arguments = "Invoke-RestMethod ipinfo.io/ip",
                 CreateNoWindow = true
             };
+
 
             using var process = Process.Start(start);
             using var reader = process.StandardOutput;
@@ -90,10 +92,10 @@ namespace ProcessingAndWait.Classes
 
             var ipAddressResult = reader.ReadToEnd();
 
-            await File.WriteAllTextAsync(fileName, ipAddressResult);
-            await process.WaitForExitAsync();
+            File.WriteAllTextAsync(fileName, ipAddressResult);
+            process.WaitForExit();
 
-            return await File.ReadAllTextAsync(fileName);
+            return File.ReadAllText(fileName);
         }
         /// <summary>
         /// Get services to a text file with json content

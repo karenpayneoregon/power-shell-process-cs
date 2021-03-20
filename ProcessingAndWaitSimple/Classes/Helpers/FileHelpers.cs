@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using static System.IO.Path;
@@ -11,25 +12,43 @@ namespace ProcessingAndWait.Classes.Helpers
 {
     public class FileHelpers : FileSystemWatcher
     {
-        /// <summary>
-        /// Path to check for new files
-        /// </summary>
-        public string MonitorPath { get; set; }
-        /// <summary>
-        /// Path to move file(s) too
-        /// </summary>
-        public string TargetPath { get; set; }
-        public FileHelpers(string monitorPath, string targetPath, string extension)
-        {
-            MonitorPath = monitorPath;
-            TargetPath = targetPath;
 
-            Created += OnCreated;
+        /// <summary>
+        /// Remove result files from Debug folder
+        /// </summary>
+        public static void RemoveFiles()
+        {
+            var extensions = new[] { ".txt", ".csv", ".json", ".html" };
+
+            var files = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory)
+                .EnumerateFiles()
+                .Where(fileInfo => extensions.Contains(fileInfo.Extension.ToLower()))
+                .ToArray();
+
+            foreach (var fileInfo in files)
+            {
+                File.Delete(fileInfo.Name);
+            }
+
+        }
+
+        public static void OpenExecutableFolder()
+        {
+            Process.Start("explorer.exe", AppDomain.CurrentDomain.BaseDirectory);
+        }
+
+        public FileHelpers()
+        {
+
             Error += OnError;
 
-            Path = MonitorPath;
-            Filter = extension;
+            Path = AppDomain.CurrentDomain.BaseDirectory;
 
+            Filters.Add("*.txt");
+            Filters.Add("*.csv");
+            Filters.Add("*.json");
+            Filters.Add("*.html");
+            
             EnableRaisingEvents = true;
 
             NotifyFilter = NotifyFilters.Attributes
@@ -43,26 +62,7 @@ namespace ProcessingAndWait.Classes.Helpers
         }
         public static List<string> ReadAllLines(string fileName) => File.ReadAllLines(fileName).ToList();
 
-        private void OnCreated(object sender, FileSystemEventArgs e)
-        {
-
-            try
-            {
-                var targetFile = Combine(TargetPath, GetFileName(e.FullPath));
-                
-                if (File.Exists(targetFile))
-                {
-                    File.Delete(targetFile);
-                }
-
-                File.Move(e.FullPath, targetFile);
-                
-            }
-            catch (Exception exception)
-            {
-                Debug.WriteLine(exception.Message);
-            }
-        }
+        //private void OnCreated(object sender, FileSystemEventArgs e) => NewFileCreated?.Invoke(e.Name);
 
         public void Start()
         {

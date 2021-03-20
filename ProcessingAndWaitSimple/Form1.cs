@@ -7,9 +7,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.NetworkInformation;
-using System.Net.Sockets;
-using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,41 +19,45 @@ namespace ProcessingAndWait
 {
     public partial class Form1 : Form
     {
+        private FileHelpers _fileHelpers = new FileHelpers();
         
         public Form1()
         {
             InitializeComponent();
-            RemoveFiles();
+            Closing += OnClosing;
+            
+            FileHelpers.RemoveFiles();
+            
+            _fileHelpers.Created += FileHelpersOnCreated;
+            _fileHelpers.Start();
+            
         }
 
-        /// <summary>
-        /// Remove result files from Debug folder
-        /// </summary>
-        private void RemoveFiles()
+        private void FileHelpersOnCreated(object sender, FileSystemEventArgs e)
         {
-            var extensions = new[] { ".txt", ".csv", ".json", ".html" };
-
-            var files = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory)
-                .EnumerateFiles()
-                .Where(fileInfo => extensions.Contains(fileInfo.Extension.ToLower()))
-                .ToArray();
-            
-            foreach (var fileInfo in files)
+            FilesListBox.InvokeIfRequired(listbox =>
             {
-                File.Delete(fileInfo.Name);
-            }
-            
+                listbox.Items.Add(e.Name!);
+                listbox.SelectedIndex = FilesListBox.Items.Count -1;
+            });
+
         }
+
+        private void OnClosing(object sender, CancelEventArgs e)
+        {
+            _fileHelpers.Stop();
+        }
+
+
         /// <summary>
         /// Get IP address synchronously
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void GetIpAddressVersion1Button_Click(object sender, EventArgs e)
+        private  void GetIpAddressVersion1Button_Click(object sender, EventArgs e)
         {
             IpAddressTextBox1.Text = "";
-            var ipAddress = await PowerShellOperations.GetIpAddress();
-            IpAddressTextBox1.Text = ipAddress;
+            IpAddressTextBox1.Text = PowerShellOperations.GetIpAddressSync();
         }
         
         /// <summary>
@@ -70,7 +71,7 @@ namespace ProcessingAndWait
             
             string ipAddress = "";
             
-            await Task.Run(async () => { ipAddress = await PowerShellOperations.GetIpAddress(); });
+            await Task.Run(async () => { ipAddress = await PowerShellOperations.GetIpAddressTask(); });
 
             if (!string.IsNullOrWhiteSpace(ipAddress))
             {
@@ -226,6 +227,11 @@ namespace ProcessingAndWait
             var details = await PowerShellOperations1.GetComputerInformationTask();
 
             MessageBox.Show($"Up time\n{details.OsUptime}");
+        }
+
+        private void OpenExecutableFolder_Click(object sender, EventArgs e)
+        {
+            FileHelpers.OpenExecutableFolder();
         }
     }
 }

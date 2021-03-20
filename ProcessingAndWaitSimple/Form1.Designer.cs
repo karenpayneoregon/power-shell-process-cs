@@ -47,6 +47,8 @@ namespace ProcessingAndWait
             this.RunScriptButton = new System.Windows.Forms.Button();
             this.TimeZoneButton = new System.Windows.Forms.Button();
             this.ComputerInformationButton = new System.Windows.Forms.Button();
+            this.OpenExecutableFolder = new System.Windows.Forms.Button();
+            this.FilesListBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,7 +144,7 @@ namespace ProcessingAndWait
             this.ServicesListView.Location = new System.Drawing.Point(35, 290);
             this.ServicesListView.MultiSelect = false;
             this.ServicesListView.Name = "ServicesListView";
-            this.ServicesListView.Size = new System.Drawing.Size(467, 326);
+            this.ServicesListView.Size = new System.Drawing.Size(877, 326);
             this.ServicesListView.TabIndex = 4;
             this.ServicesListView.UseCompatibleStateImageBehavior = false;
             this.ServicesListView.View = System.Windows.Forms.View.Details;
@@ -208,11 +210,32 @@ namespace ProcessingAndWait
             this.ComputerInformationButton.UseVisualStyleBackColor = true;
             this.ComputerInformationButton.Click += new System.EventHandler(this.ComputerInformationButton_Click);
             // 
+            // OpenExecutableFolder
+            // 
+            this.OpenExecutableFolder.Image = ((System.Drawing.Image)(resources.GetObject("OpenExecutableFolder.Image")));
+            this.OpenExecutableFolder.Location = new System.Drawing.Point(452, 19);
+            this.OpenExecutableFolder.Name = "OpenExecutableFolder";
+            this.OpenExecutableFolder.Size = new System.Drawing.Size(49, 23);
+            this.OpenExecutableFolder.TabIndex = 8;
+            this.OpenExecutableFolder.UseVisualStyleBackColor = true;
+            this.OpenExecutableFolder.Click += new System.EventHandler(this.OpenExecutableFolder_Click);
+            // 
+            // FilesListBox
+            // 
+            this.FilesListBox.FormattingEnabled = true;
+            this.FilesListBox.ItemHeight = 15;
+            this.FilesListBox.Location = new System.Drawing.Point(690, 19);
+            this.FilesListBox.Name = "FilesListBox";
+            this.FilesListBox.Size = new System.Drawing.Size(213, 229);
+            this.FilesListBox.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 628);
+            this.ClientSize = new System.Drawing.Size(925, 628);
+            this.Controls.Add(this.FilesListBox);
+            this.Controls.Add(this.OpenExecutableFolder);
             this.Controls.Add(this.ComputerInformationButton);
             this.Controls.Add(this.TimeZoneButton);
             this.Controls.Add(this.RunScriptButton);
@@ -223,6 +246,7 @@ namespace ProcessingAndWait
             this.Controls.Add(this.ServicesListView);
             this.Controls.Add(this.GetServicesAsJsonButton);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -253,6 +277,8 @@ namespace ProcessingAndWait
         private System.Windows.Forms.Button RunScriptButton;
         private System.Windows.Forms.Button TimeZoneButton;
         private System.Windows.Forms.Button ComputerInformationButton;
+        private System.Windows.Forms.Button OpenExecutableFolder;
+        private System.Windows.Forms.ListBox FilesListBox;
     }
 }
 
