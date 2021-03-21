@@ -19,7 +19,7 @@ namespace ProcessingAndWait
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TextBoxWriterForm());
+            Application.Run(new Form1());
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿Online docs
+﻿Useful information to use while writing article
+
+Online docs
 Microsoft.PowerShell.Management https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-7.1
 
 Several ways to get current logged in user in Powershell https://www.optimizationcore.com/scripting/ways-get-current-logged-user-powershell/
