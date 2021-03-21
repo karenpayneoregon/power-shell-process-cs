@@ -1,5 +1,5 @@
 ﻿
-namespace ProcessingAndWait
+namespace ProcessingAndWait.Forms
 {
     partial class EventsForm
     {

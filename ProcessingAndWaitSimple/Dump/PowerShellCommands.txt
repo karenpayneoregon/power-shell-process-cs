@@ -1,6 +1,8 @@
 ﻿Online docs
 Microsoft.PowerShell.Management https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/?view=powershell-7.1
 
+Several ways to get current logged in user in Powershell https://www.optimizationcore.com/scripting/ways-get-current-logged-user-powershell/
+
 -----------------------------------------------------
 Variations on what has been presented in code
 -----------------------------------------------------
@@ -43,3 +45,20 @@ Get-ChildItem C:\OED\Dotnetland\VS2019\PowerShellSolution -recurse -Depth 2 -Att
 
 Get-NetIPAddress -AddressFamily IPv4 | where-object IPAddress -notmatch "^(169)|(127)" | Sort-Object IPAddress | select IPaddress,Interface* | ConvertTo-Json
 
+User details
+Get-LocalGroupMember -Group "Administrators" | ConvertTo-Json
+
+
+Get-ComputerInfo -Property "os*"
+Get-Clipboard
+
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/add-content?view=powershell-7.1
+Get-Content -Path .\data.txt
+
+Get-WmiObject -Class Win32_BIOS
+
+Computer name
+ (Get-Item -Path Env:computername).Value
+
+Computer os
+ (Get-Item -Path Env:os).Value

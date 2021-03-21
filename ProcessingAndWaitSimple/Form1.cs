@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProcessingAndWait.Classes;
 using ProcessingAndWait.Classes.Helpers;
+using ProcessingAndWait.Forms;
 using ProcessingAndWait.LanguageExtensions;
 using StopWatchLibrary;
 
