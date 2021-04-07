@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using ProcessingAndWait.Classes.Containers;
@@ -18,10 +19,6 @@ namespace ProcessingAndWait.Forms
             Shown += OnShown;
         }
 
-        public EventsForm()
-        {
-            InitializeComponent();
-        }
 
         private void OnShown(object? sender, EventArgs e)
         {

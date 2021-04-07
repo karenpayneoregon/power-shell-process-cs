@@ -133,7 +133,6 @@ namespace ProcessingAndWait.Classes
             if (File.Exists(fileName))
             {
                 File.Delete(fileName);
-
             }
 
             var start = new ProcessStartInfo
@@ -145,8 +144,6 @@ namespace ProcessingAndWait.Classes
             };
 
             using var process = Process.Start(start);
-
-            // ReSharper disable once PossibleNullReferenceException
             using var reader = process.StandardOutput;
 
             process.EnableRaisingEvents = true;

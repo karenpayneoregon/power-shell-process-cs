@@ -50,11 +50,8 @@ namespace ProcessingAndWait.Classes.Helpers
             Error += OnError;
 
             Path = AppDomain.CurrentDomain.BaseDirectory;
-
-            foreach (var fileExtension in _fileExtension)
-            {
-                Filters.Add(fileExtension.PrependAsterisk());
-            }
+            
+            _fileExtension.ToList().ForEach(ext => ext.PrependAsterisk());
 
             EnableRaisingEvents = true;
 

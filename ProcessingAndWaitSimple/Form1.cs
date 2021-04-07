@@ -27,11 +27,18 @@ namespace ProcessingAndWait
             InitializeComponent();
             Closing += OnClosing;
             
+            Shown += OnShown;
+            
             FileHelpers.RemoveFiles();
             
             _fileHelpers.Created += FileHelpersOnCreated;
             _fileHelpers.Start();
             
+        }
+
+        private void OnShown(object? sender, EventArgs e)
+        {
+            ActiveControl = RunScriptButton;
         }
 
         private void FileHelpersOnCreated(object sender, FileSystemEventArgs e)
