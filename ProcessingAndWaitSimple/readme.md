@@ -4,6 +4,9 @@ This project shows how to run PowerShell operations using Process without showin
 
 In one case results are in Json which will be presented in a ListView while another example shows results in TextBox controls.
 
+
+![img](https://img.shields.io/badge/Karen%20Payne-MVP-lightgrey)
+
 # Requires
 
 ![.NET 5 or .NET Core](assets/Versions.png)

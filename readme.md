@@ -2,6 +2,8 @@
 
 Show how to use PowerShell with C# by calling via Process.Start. An alternate method is to use an NuGet package to reference PowerShell directly.
 
+![img](https://img.shields.io/badge/Karen%20Payne-MVP-blue)
+
 # Microsoft TechNet article
 
 TODO
