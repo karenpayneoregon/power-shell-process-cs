@@ -35,6 +35,8 @@ namespace ProcessingAndWait
             _fileHelpers.Created += FileHelpersOnCreated;
             _fileHelpers.Start();
             
+            Debug.WriteLine(DateTime.Now.AddDays(-1).ToString("d"));
+            
         }
 
         private void OnShown(object? sender, EventArgs e)

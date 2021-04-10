@@ -188,12 +188,15 @@ namespace ProcessingAndWait.Classes
                 File.Delete(fileName);
             }
 
+
+            // Get-EventLog -LogName application -After 3/03/2021 | Select-Object Timegenerated, EntryType, Source, Message | ConvertTo-Json
+
             var start = new ProcessStartInfo
             {
                 FileName = "powershell.exe",
 
                 RedirectStandardOutput = true,
-                Arguments = "Get-EventLog -LogName application -After 3/03/2021 | Select-Object Timegenerated, EntryType, Source, Message | ConvertTo-Json",
+                Arguments = $"Get-EventLog -LogName application -After {DateTime.Now.AddDays(-1):d} | Select-Object Timegenerated, EntryType, Source, Message | ConvertTo-Json",
                 CreateNoWindow = true
             };
 
