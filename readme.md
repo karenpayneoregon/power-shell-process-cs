@@ -8,7 +8,7 @@ Show how to use PowerShell with C# by calling via Process.Start. An alternate me
 
 # Microsoft TechNet article
 
-TODO
+[Running PowerShell with C#](https://social.technet.microsoft.com/wiki/contents/articles/54294.running-powershell-with-c.aspx)
 
 # Requires
 

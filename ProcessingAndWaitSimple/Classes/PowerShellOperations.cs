@@ -54,7 +54,7 @@ namespace ProcessingAndWait.Classes
 
             process.EnableRaisingEvents = true;
 
-            var ipAddressResult = reader.ReadToEnd();
+            var ipAddressResult = await reader.ReadToEndAsync();
 
             await File.WriteAllTextAsync(fileName, ipAddressResult);
             await process.WaitForExitAsync();
@@ -116,7 +116,7 @@ namespace ProcessingAndWait.Classes
                 FileName = "powershell.exe",
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
-                Arguments = "Get-Service | Select-Object Name, DisplayName, @{ n='Status'; e={ $_.Status.ToString() } }, @{ n='table'; e={ 'Status' } } | ConvertTo-Json",
+                Arguments = "Get-Service | Select-Object Name, DisplayName, @{ n='Status'; " + "e={ $_.Status.ToString() } }, @{ n='table'; e={ 'Status' } } | ConvertTo-Json",
                 CreateNoWindow = true
             };
 
