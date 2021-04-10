@@ -218,7 +218,6 @@ namespace ProcessingAndWait
         /// <param name="e"></param>
         private async void RunScriptButton_Click(object sender, EventArgs e)
         {
-
             const string fileName = "regFile.txt";
             var results = await PowerShellOperations1.GetRegistryInformationAsJson(fileName);
             if (results)

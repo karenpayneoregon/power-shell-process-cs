@@ -1,11 +1,14 @@
 ﻿# About
 
-This project shows how to run `PowerShell` operations using Process without showing a window and will direct results to a text file followed by reading the text file for results.
+This project shows how to run [PowerShell](https://docs.microsoft.com/en-us/powershell/) operations using Process without showing a window and will direct results to a text file followed by reading the text file for results.
 
 In one case results are in Json which will be presented in a ListView while another example shows results in TextBox controls.
 
 
-![img](https://img.shields.io/badge/Karen%20Payne-MVP-lightgrey)
+
+
+![img](https://img.shields.io/badge/Karen%20Payne-MVP-blue)&nbsp;&nbsp;&nbsp;&nbsp;![img](https://img.shields.io/static/v1?label=C%23&message=PowerShell)
+
 
 # Requires
 
