@@ -38,6 +38,7 @@ Those with dates on log entries, change them to current dates as event logs can 
 - Get last boot time Get-CimInstance -ClassName win32_operatingsystem | select  lastbootuptime
 - Get current IP configuration Get-NetIPConfiguration
 - Get-NetAdapter
+- Is 64bit [Environment]::Is64BitProcess
 
 
 [10 Examples to Check Event Log](https://www.nextofwindows.com/10-examples-to-check-event-log-on-local-and-remote-computer-using-powershell) on Local and Remote Computer Using PowerShell
