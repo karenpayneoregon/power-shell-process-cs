@@ -30,7 +30,7 @@ namespace ProcessingAndWait.Classes.Helpers
             
             if (string.IsNullOrWhiteSpace(chromeAppFileName))
             {
-                throw new Exception("Could not find chrome.exe!");
+                throw new Exception("Could not find chrome.exe!!!");
             }
             
             Process.Start(chromeAppFileName, url);
