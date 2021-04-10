@@ -61,6 +61,7 @@ namespace ProcessingAndWait.Classes
 
             return await File.ReadAllTextAsync(fileName);
         }
+
         /// <summary>
         /// Get this computer's IP address asynchronous 
         /// </summary>

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProcessingAndWait.Classes;
+using ProcessingAndWait.Classes.Containers;
 using ProcessingAndWait.Classes.Helpers;
 using ProcessingAndWait.Forms;
 using ProcessingAndWait.LanguageExtensions;
@@ -81,16 +82,22 @@ namespace ProcessingAndWait
             
             await Task.Run(async () => { ipAddress = await PowerShellOperations.GetIpAddressTask(); });
 
-            if (!string.IsNullOrWhiteSpace(ipAddress))
-            {
-                IpAddressTextBox2.Text = ipAddress;
-            }
-            else
-            {
-                IpAddressTextBox2.Text = "Failed to obtain IP address";
-            }
-
+            IpAddressTextBox2.Text = !string.IsNullOrWhiteSpace(ipAddress) ? ipAddress : "Failed to obtain IP address";
             
+        }
+        /// <summary>
+        /// In this case the file name is a parameter to the PowerShell command and
+        /// more details are obtained
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void GetIpAddressVersion3Button_Click(object sender, EventArgs e)
+        {
+            IpItem ipAddress = new();
+
+            await Task.Run(async () => { ipAddress = await PowerShellOperations1.GetIpAddressAsJsonTask(); });
+
+            MessageBox.Show(!string.IsNullOrWhiteSpace(ipAddress.Ip) ? ipAddress.Details : "Operation failed");
         }
         private async void AddressFamilyButton_Click(object sender, EventArgs e)
         {

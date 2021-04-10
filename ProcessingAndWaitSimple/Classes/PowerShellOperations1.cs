@@ -19,6 +19,41 @@ namespace ProcessingAndWait.Classes
     /// </summary>
     public class PowerShellOperations1
     {
+        public static async Task<IpItem> GetIpAddressAsJsonTask()
+        {
+            const string fileName = "externalip.json";
+
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                Arguments = "Invoke-RestMethod -uri https://ipinfo.io/json -outfile externalip.json",
+                CreateNoWindow = true
+            };
+
+
+            using var process = Process.Start(start);
+            using var reader = process.StandardOutput;
+
+            process.EnableRaisingEvents = true;
+
+            var ipAddressResult = await reader.ReadToEndAsync();
+            if (File.Exists(fileName))
+            {
+                var json = File.ReadAllText(fileName);
+                return JsonConvert.DeserializeObject<IpItem>(json);
+            }
+
+            return new IpItem();
+        }
+
         /// <summary>
         /// Get event log entries for yesterday onwards
         /// </summary>
@@ -209,6 +244,5 @@ namespace ProcessingAndWait.Classes
             return JsonConvert.DeserializeObject<MachineComputerInformation>(json);
 
         }
-
     }
 }

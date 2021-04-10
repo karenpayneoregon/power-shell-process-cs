@@ -61,28 +61,28 @@
   <data name="GetIpAddressVersion1Button.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
+        vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GetIpAddressVersion2Button.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
+        vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="AddressFamilyButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
+        vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="GetApplicationEventsJsonButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAASRJREFUOE+tkT2Kg0AYhnMBc4w0br99GhG1FGwkhQeINrZ2prLWFKayyQG2Ec9g
+        vQAADr0BR/uQrQAAASRJREFUOE+tkT2Kg0AYhnMBc4w0br99GhG1FGwkhQeINrZ2prLWFKayyQG2Ec9g
         KaQQbOzEHTVky3fHIS75MURhP3iYv3ce5mMWQ10uF7yhoXxe46wAXGe0+tB6vX6JaZqo67q9lYwKyHfz
         hKIo2Af7J8ksQT8ewsOdZLagZ5DQfDNLMCBJEsv1+cmCR/5fQBd8v1EUBbq2w7k7oyHt6OWeOwGdfFRV
         1W02G3Acxw6PxyMIaV5KHgVfuq5jtVohDENomobtdosgCNhLpgh+lsslkiRBWZZI0xSO48AwDLS0nUkC
@@ -137,7 +137,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAAOvwAADr8BOAVTJAAAAEtJREFUOE9j+P7jx39K
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAAOvQAADr0BR/uQrQAAAEtJREFUOE9j+P7jx39K
         MNgAZ2dnsvAgMoASzIAOsCnCh6HaEAAkiM252PAgMQBIOKBhuP+IwSQHGjomycnoeBAZQAlm+P+fEvyf
         AQDB0qTXZTC5oAAAAABJRU5ErkJggg==
 </value>
@@ -145,7 +145,7 @@
   <data name="GetServicesAsJsonButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAASRJREFUOE+tkT2Kg0AYhnMBc4w0br99GhG1FGwkhQeINrZ2prLWFKayyQG2Ec9g
+        vQAADr0BR/uQrQAAASRJREFUOE+tkT2Kg0AYhnMBc4w0br99GhG1FGwkhQeINrZ2prLWFKayyQG2Ec9g
         KaQQbOzEHTVky3fHIS75MURhP3iYv3ce5mMWQ10uF7yhoXxe46wAXGe0+tB6vX6JaZqo67q9lYwKyHfz
         hKIo2Af7J8ksQT8ewsOdZLagZ5DQfDNLMCBJEsv1+cmCR/5fQBd8v1EUBbq2w7k7oyHt6OWeOwGdfFRV
         1W02G3Acxw6PxyMIaV5KHgVfuq5jtVohDENomobtdosgCNhLpgh+lsslkiRBWZZI0xSO48AwDLS0nUkC
@@ -156,7 +156,7 @@
   <data name="RunScriptButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAMRJREFUOE/Fk80KgzAQhHP2sXIUNC9Y7/URQquPVO0hyXG7s8UQdPGHHhoYRHbm
+        vQAADr0BR/uQrQAAAMRJREFUOE/Fk80KgzAQhHP2sXIUNC9Y7/URQquPVO0hyXG7s8UQdPGHHhoYRHbm
         SyKjWVaMsWJ1rMSiA8EDbyVhIgKg896Tc46stbuCB15kSkDC4PkYaJ7equq6ljkELzIZEEIQuhaEptec
         5yqAX3YB0NEVTgHg49OqH/E0gCW5vP4PwLoKwKZLEA28/QKQBrZtK4JJU3/v5akBEoLjMKq7on2YLUW6
         BECoaRqZFe3bAPIVyiOvVbZvDTj7G+f2sb5hY8wHkEPWzqpufy0AAAAASUVORK5CYII=
@@ -165,7 +165,7 @@
   <data name="TimeZoneButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAPFJREFUOE+lk8ENgzAMRZmg27AABw6cGIBx2IAbZyZgBqqWKWhZoO2FAxc3jxoJ
+        vQAADr0BR/uQrQAAAPFJREFUOE+lk8ENgzAMRZmg27AABw6cGIBx2IAbZyZgBqqWKWhZoO2FAxc3jxoJ
         DFFVaulLif3/V+wkgY1hGEKH0qFzGBWsyYVK24Yrnhyqvu+lKArJskziOJ7Amhw1OHBV9gkVt3VdS5Ik
         kue5NM1Zbt19Amty1ODAXZm4TUUhTVO5Xlp5Pl67oAZHTapZHHI03K04iqLVHsCBq+2EGJT0xxEtec8A
         wEWDFoOOIdGnJfoM4KJBi8HIpBmWJfoM4KJB+9VgiTlvDbwt+GBb8A7RBztE7zXuYXON+haOPyTCbf57
@@ -175,7 +175,7 @@
   <data name="ComputerInformationButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAAIBJREFUOE9j+P79uwIDJeDbt2/vv3z5YgDlkg6ABvynyBCQASkpKf9fv379H+id
+        vAAADrwBlbxySQAAAIBJREFUOE9j+P79uwIDJeDbt2/vv3z5YgDlkg6ABvynyBCQASkpKf9fv379H+id
         BKgw8QBkgJOTE/mGwAwA4cjIyP9XrlwBeakfKk0YIBsAwr6+vjBDiMIYBoAwyCXYxNExVgMocgGSZtLD
         gKJYoDgdADFFKZGyvEBxbqQMMDAAAEIdD1uGIK1pAAAAAElFTkSuQmCC
 </value>
@@ -191,10 +191,17 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAALBJREFUOE/NkDEOAiEQRTmCZ6LnAPSchZ6eO3gEa+6htlTQrj6SIbssm6jRRJIf
+        vAAADrwBlbxySQAAALBJREFUOE/NkDEOAiEQRTmCZ6LnAPSchZ6eO3gEa+6htlTQrj6SIbssm6jRRJIf
         Zv78eSEoTq11+VQdoLV+W38I4H5VvwV476f1WjuAiAVrbe+pZ5ApgCCDlFIPUuONkA4QQ5ZDCJsgwhsh
         GwDNKOdce/5stgNANsYst+u9iSHLQKjXvryiA+QPRgCeBI987g6IMTYTUUvwyBc1QM759GzOYpZSLniI
         WnwyeG3pO0epB30boFwhu7LdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="GetIpAddressVersion3Button.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
+        ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">

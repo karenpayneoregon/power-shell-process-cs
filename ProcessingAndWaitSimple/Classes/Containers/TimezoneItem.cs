@@ -6,7 +6,7 @@
         public string DisplayName { get; set; }
         public string StandardName { get; set; }
         public string DaylightName { get; set; }
-        public Baseutcoffset BaseUtcOffset { get; set; }
+        public BaseUtcOffset BaseUtcOffset { get; set; }
         public bool SupportsDaylightSavingTime { get; set; }
     }
 }

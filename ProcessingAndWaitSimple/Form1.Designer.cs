@@ -33,6 +33,8 @@ namespace ProcessingAndWait
             this.GetIpAddressVersion1Button = new System.Windows.Forms.Button();
             this.GetIpAddressVersion2Button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.FamilyListBox = new System.Windows.Forms.ListBox();
+            this.AddressFamilyButton = new System.Windows.Forms.Button();
             this.IpAddressTextBox2 = new System.Windows.Forms.TextBox();
             this.IpAddressTextBox1 = new System.Windows.Forms.TextBox();
             this.GetApplicationEventsJsonButton = new System.Windows.Forms.Button();
@@ -50,8 +52,7 @@ namespace ProcessingAndWait
             this.OpenExecutableFolder = new System.Windows.Forms.Button();
             this.FilesListBox = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AddressFamilyButton = new System.Windows.Forms.Button();
-            this.FamilyListBox = new System.Windows.Forms.ListBox();
+            this.GetIpAddressVersion3Button = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +83,7 @@ namespace ProcessingAndWait
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.GetIpAddressVersion3Button);
             this.groupBox1.Controls.Add(this.FamilyListBox);
             this.groupBox1.Controls.Add(this.AddressFamilyButton);
             this.groupBox1.Controls.Add(this.IpAddressTextBox2);
@@ -90,10 +92,31 @@ namespace ProcessingAndWait
             this.groupBox1.Controls.Add(this.GetIpAddressVersion1Button);
             this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 190);
+            this.groupBox1.Size = new System.Drawing.Size(375, 226);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Get IP Address";
+            // 
+            // FamilyListBox
+            // 
+            this.FamilyListBox.FormattingEnabled = true;
+            this.FamilyListBox.ItemHeight = 15;
+            this.FamilyListBox.Location = new System.Drawing.Point(198, 126);
+            this.FamilyListBox.Name = "FamilyListBox";
+            this.FamilyListBox.Size = new System.Drawing.Size(152, 94);
+            this.FamilyListBox.TabIndex = 5;
+            // 
+            // AddressFamilyButton
+            // 
+            this.AddressFamilyButton.Image = ((System.Drawing.Image)(resources.GetObject("AddressFamilyButton.Image")));
+            this.AddressFamilyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddressFamilyButton.Location = new System.Drawing.Point(15, 126);
+            this.AddressFamilyButton.Name = "AddressFamilyButton";
+            this.AddressFamilyButton.Size = new System.Drawing.Size(177, 23);
+            this.AddressFamilyButton.TabIndex = 4;
+            this.AddressFamilyButton.Text = "Address family";
+            this.AddressFamilyButton.UseVisualStyleBackColor = true;
+            this.AddressFamilyButton.Click += new System.EventHandler(this.AddressFamilyButton_Click);
             // 
             // IpAddressTextBox2
             // 
@@ -159,10 +182,10 @@ namespace ProcessingAndWait
             this.ServicesListView.FullRowSelect = true;
             this.ServicesListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ServicesListView.HideSelection = false;
-            this.ServicesListView.Location = new System.Drawing.Point(12, 290);
+            this.ServicesListView.Location = new System.Drawing.Point(12, 319);
             this.ServicesListView.MultiSelect = false;
             this.ServicesListView.Name = "ServicesListView";
-            this.ServicesListView.Size = new System.Drawing.Size(900, 326);
+            this.ServicesListView.Size = new System.Drawing.Size(900, 297);
             this.ServicesListView.TabIndex = 4;
             this.ServicesListView.UseCompatibleStateImageBehavior = false;
             this.ServicesListView.View = System.Windows.Forms.View.Details;
@@ -263,26 +286,17 @@ namespace ProcessingAndWait
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // AddressFamilyButton
+            // GetIpAddressVersion3Button
             // 
-            this.AddressFamilyButton.Image = ((System.Drawing.Image)(resources.GetObject("AddressFamilyButton.Image")));
-            this.AddressFamilyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddressFamilyButton.Location = new System.Drawing.Point(12, 84);
-            this.AddressFamilyButton.Name = "AddressFamilyButton";
-            this.AddressFamilyButton.Size = new System.Drawing.Size(177, 23);
-            this.AddressFamilyButton.TabIndex = 4;
-            this.AddressFamilyButton.Text = "Address family";
-            this.AddressFamilyButton.UseVisualStyleBackColor = true;
-            this.AddressFamilyButton.Click += new System.EventHandler(this.AddressFamilyButton_Click);
-            // 
-            // FamilyListBox
-            // 
-            this.FamilyListBox.FormattingEnabled = true;
-            this.FamilyListBox.ItemHeight = 15;
-            this.FamilyListBox.Location = new System.Drawing.Point(198, 84);
-            this.FamilyListBox.Name = "FamilyListBox";
-            this.FamilyListBox.Size = new System.Drawing.Size(152, 94);
-            this.FamilyListBox.TabIndex = 5;
+            this.GetIpAddressVersion3Button.Image = ((System.Drawing.Image)(resources.GetObject("GetIpAddressVersion3Button.Image")));
+            this.GetIpAddressVersion3Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GetIpAddressVersion3Button.Location = new System.Drawing.Point(12, 84);
+            this.GetIpAddressVersion3Button.Name = "GetIpAddressVersion3Button";
+            this.GetIpAddressVersion3Button.Size = new System.Drawing.Size(177, 23);
+            this.GetIpAddressVersion3Button.TabIndex = 6;
+            this.GetIpAddressVersion3Button.Text = "Version 3 *";
+            this.GetIpAddressVersion3Button.UseVisualStyleBackColor = true;
+            this.GetIpAddressVersion3Button.Click += new System.EventHandler(this.GetIpAddressVersion3Button_Click);
             // 
             // Form1
             // 
@@ -339,6 +353,7 @@ namespace ProcessingAndWait
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button AddressFamilyButton;
         private System.Windows.Forms.ListBox FamilyListBox;
+        private System.Windows.Forms.Button GetIpAddressVersion3Button;
     }
 }
 

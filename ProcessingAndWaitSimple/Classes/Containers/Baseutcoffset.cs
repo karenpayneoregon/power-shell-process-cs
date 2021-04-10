@@ -1,6 +1,6 @@
 ﻿namespace ProcessingAndWait.Classes.Containers
 {
-    public class Baseutcoffset
+    public class BaseUtcOffset
     {
         public long Ticks { get; set; }
         public int Days { get; set; }
