@@ -259,7 +259,16 @@ namespace ProcessingAndWait
         {
             FileHelpers.OpenExecutableFolder();
         }
-
+        /// <summary>
+        /// Used when Windows marks file(s) with mark of the web which usually happens
+        /// when downloading files from the web such as a Visual Studio project.
+        ///
+        /// To test, pass in a folder name that exists with one or more files with
+        /// the mark of the web, run, inspect the files via their property dialog to
+        /// confirm the code worked.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UnblockFolderButton_Click(object sender, EventArgs e)
         {
             PowerShellOperations1.UnblockFiles("C:\\OED\\DataValidationWindowsForms1");
