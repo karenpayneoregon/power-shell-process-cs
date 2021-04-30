@@ -152,6 +152,28 @@ namespace ProcessingAndWait.Classes
             return File.Exists(fileName);
 
         }
+
+        /// <summary>
+        /// Removed 'mark of the web' from all files in a folder recursively 
+        /// </summary>
+        /// <param name="folderName">folder to perform the operation on</param>
+        public static void UnblockFiles(string folderName)
+        {
+            if (!Directory.Exists(folderName))
+            {
+                return;
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                Arguments = $"Get-ChildItem -Path '{folderName}' -Recurse | Unblock-File",
+                CreateNoWindow = true
+            };
+
+            using var process = Process.Start(start);
+
+        }
         /// <summary>
         /// Get time zone information
         /// </summary>

@@ -33,6 +33,7 @@ namespace ProcessingAndWait
             this.GetIpAddressVersion1Button = new System.Windows.Forms.Button();
             this.GetIpAddressVersion2Button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GetIpAddressVersion3Button = new System.Windows.Forms.Button();
             this.FamilyListBox = new System.Windows.Forms.ListBox();
             this.AddressFamilyButton = new System.Windows.Forms.Button();
             this.IpAddressTextBox2 = new System.Windows.Forms.TextBox();
@@ -52,7 +53,7 @@ namespace ProcessingAndWait
             this.OpenExecutableFolder = new System.Windows.Forms.Button();
             this.FilesListBox = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GetIpAddressVersion3Button = new System.Windows.Forms.Button();
+            this.UnblockFolderButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +97,18 @@ namespace ProcessingAndWait
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Get IP Address";
+            // 
+            // GetIpAddressVersion3Button
+            // 
+            this.GetIpAddressVersion3Button.Image = ((System.Drawing.Image)(resources.GetObject("GetIpAddressVersion3Button.Image")));
+            this.GetIpAddressVersion3Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GetIpAddressVersion3Button.Location = new System.Drawing.Point(12, 84);
+            this.GetIpAddressVersion3Button.Name = "GetIpAddressVersion3Button";
+            this.GetIpAddressVersion3Button.Size = new System.Drawing.Size(177, 23);
+            this.GetIpAddressVersion3Button.TabIndex = 6;
+            this.GetIpAddressVersion3Button.Text = "Version 3 *";
+            this.GetIpAddressVersion3Button.UseVisualStyleBackColor = true;
+            this.GetIpAddressVersion3Button.Click += new System.EventHandler(this.GetIpAddressVersion3Button_Click);
             // 
             // FamilyListBox
             // 
@@ -286,23 +299,22 @@ namespace ProcessingAndWait
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // GetIpAddressVersion3Button
+            // UnblockFolderButton
             // 
-            this.GetIpAddressVersion3Button.Image = ((System.Drawing.Image)(resources.GetObject("GetIpAddressVersion3Button.Image")));
-            this.GetIpAddressVersion3Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GetIpAddressVersion3Button.Location = new System.Drawing.Point(12, 84);
-            this.GetIpAddressVersion3Button.Name = "GetIpAddressVersion3Button";
-            this.GetIpAddressVersion3Button.Size = new System.Drawing.Size(177, 23);
-            this.GetIpAddressVersion3Button.TabIndex = 6;
-            this.GetIpAddressVersion3Button.Text = "Version 3 *";
-            this.GetIpAddressVersion3Button.UseVisualStyleBackColor = true;
-            this.GetIpAddressVersion3Button.Click += new System.EventHandler(this.GetIpAddressVersion3Button_Click);
+            this.UnblockFolderButton.Location = new System.Drawing.Point(408, 78);
+            this.UnblockFolderButton.Name = "UnblockFolderButton";
+            this.UnblockFolderButton.Size = new System.Drawing.Size(175, 23);
+            this.UnblockFolderButton.TabIndex = 11;
+            this.UnblockFolderButton.Text = "Unblock folder";
+            this.UnblockFolderButton.UseVisualStyleBackColor = true;
+            this.UnblockFolderButton.Click += new System.EventHandler(this.UnblockFolderButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 628);
+            this.Controls.Add(this.UnblockFolderButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.FilesListBox);
             this.Controls.Add(this.OpenExecutableFolder);
@@ -354,6 +366,7 @@ namespace ProcessingAndWait
         private System.Windows.Forms.Button AddressFamilyButton;
         private System.Windows.Forms.ListBox FamilyListBox;
         private System.Windows.Forms.Button GetIpAddressVersion3Button;
+        private System.Windows.Forms.Button UnblockFolderButton;
     }
 }
 

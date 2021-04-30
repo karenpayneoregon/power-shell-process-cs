@@ -260,6 +260,9 @@ namespace ProcessingAndWait
             FileHelpers.OpenExecutableFolder();
         }
 
-
+        private void UnblockFolderButton_Click(object sender, EventArgs e)
+        {
+            PowerShellOperations1.UnblockFiles("C:\\OED\\DataValidationWindowsForms1");
+        }
     }
 }
