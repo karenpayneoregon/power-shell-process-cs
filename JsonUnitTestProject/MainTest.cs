@@ -50,7 +50,7 @@ namespace JsonUnitTestProject
             /*
              * OsLocalDateTime deserialized with converter returns incorrect date time
              */
-            Debug.WriteLine($"{cdi.OsLocalDateTime:G} -- {DateTime.Now:G}");
+            Debug.WriteLine($"OsLocalDateTime: {cdi.OsLocalDateTime:G} --> {DateTime.Now:G}");
             
         }
     }
