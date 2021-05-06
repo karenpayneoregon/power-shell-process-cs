@@ -1,0 +1,18 @@
+﻿{
+  "BiosReleaseDate": "\/Date(1603324800000)\/",
+  "OsLocalDateTime": "\/Date(1620317100586)\/",
+  "OsLastBootUpTime": "\/Date(1620167376500)\/",
+  "OsUptime": {
+    "Ticks": 1497240675692,
+    "Days": 1,
+    "Hours": 17,
+    "Milliseconds": 67,
+    "Minutes": 35,
+    "Seconds": 24,
+    "TotalDays": 1.7329174487175925,
+    "TotalHours": 41.590018769222219,
+    "TotalMilliseconds": 149724067.5692,
+    "TotalMinutes": 2495.4011261533333,
+    "TotalSeconds": 149724.0675692
+  }
+}

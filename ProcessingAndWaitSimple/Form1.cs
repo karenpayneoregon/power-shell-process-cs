@@ -252,7 +252,7 @@ namespace ProcessingAndWait
         {
             var details = await PowerShellOperations1.GetComputerInformationTask();
 
-            MessageBox.Show($"Up time\n{details.OsUptime}");
+            MessageBox.Show($"Up time\n{details.OsUptime}\n{details.OsLocalDateTime.ToString("G")}");
         }
 
         private void OpenExecutableFolder_Click(object sender, EventArgs e)
