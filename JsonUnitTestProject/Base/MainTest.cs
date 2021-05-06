@@ -27,7 +27,7 @@ namespace JsonUnitTestProject
             TimeSpan.FromMilliseconds(GetTickCount64());
         
         public static DateTime Now => 
-            new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
+            new(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
 
 
     }
