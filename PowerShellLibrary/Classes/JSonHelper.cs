@@ -6,6 +6,9 @@ using PowerShellLibrary.Converters;
 
 namespace PowerShellLibrary.Classes
 {
+    /// <summary>
+	/// When viewing in GitHub formatting of this file is way off
+	/// </summary>
 	public class JSonHelper
 	{
 		/// <summary>
