@@ -27,7 +27,11 @@ namespace JsonUnitTestProject
             
             Assert.AreEqual(ts1, ts2);
         }
-        
+
+        /// <summary>
+        /// No assertion as the conversion fails on OsLocalDateTime compared to current time in hours and AM/PM indicator
+        /// </summary>
+        /// <returns></returns>
         [TestMethod]
         [TestTraits(Trait.UnixEpochDateTime)]
         public async Task Deserialize_Object_With_UnixEpochDateTime()
@@ -41,10 +45,12 @@ namespace JsonUnitTestProject
                 cdi.OsLocalDateTime.Hour,
                 cdi.OsLocalDateTime.Minute,
                 0);
-            
 
-            
-            Debug.WriteLine($"{cdi.OsLocalDateTime.ToString("G")} -- {DateTime.Now.ToString("G")}");
+
+            /*
+             * OsLocalDateTime deserialized with converter returns incorrect date time
+             */
+            Debug.WriteLine($"{cdi.OsLocalDateTime:G} -- {DateTime.Now:G}");
             
         }
     }
