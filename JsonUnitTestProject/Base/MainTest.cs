@@ -30,19 +30,6 @@ namespace JsonUnitTestProject
             new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
 
 
-        public static DateTime MilitaryToDateTime(int Military)
-        {
-            int Hours = Military / 100;
-            int Minutes = Military - Hours * 100;
-            DateTime Result = DateTime.MinValue;
-
-
-            Result = Result.AddHours(Hours);
-            Result = Result.AddMinutes(Minutes);
-
-
-            return Result;
-        }
     }
 
 }
