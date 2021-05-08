@@ -46,12 +46,13 @@ namespace JsonUnitTestProject
                 cdi.OsLocalDateTime.Minute,
                 0);
 
-
-            /*
-             * OsLocalDateTime deserialized with converter returns incorrect date time
-             */
-            Debug.WriteLine($"OsLocalDateTime: {cdi.OsLocalDateTime:G} --> {DateTime.Now:G}");
+            var result = DateTime.Compare(
+                RemoveMillisecondsAndSeconds(cdi.OsLocalDateTime), 
+                RemoveMillisecondsAndSeconds(DateTime.Now));
             
+            Assert.AreEqual(result,0, 
+                "Expected UnixEpochDateTime to equal DateTime.Now");
+
         }
     }
 }

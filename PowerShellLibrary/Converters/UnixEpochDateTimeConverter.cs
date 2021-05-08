@@ -10,10 +10,11 @@ namespace PowerShellLibrary.Converters
     /// Used for deserializing json with Microsoft date format.
     /// </summary>
     /// <remarks>
-    /// This class was code by Microsoft
+    /// This class was code by Microsoft which did not work right
     /// https://docs.microsoft.com/en-us/dotnet/standard/datetime/system-text-json-support
     ///
-    /// Karen Payne took advantage of current C# features
+    /// Karen Payne changed epochDateTime.AddMilliseconds(unixTime) to epochDateTime.AddMilliseconds(unixTime).ToLocalTime()
+    /// else incorrect result.
     /// </remarks>
     public sealed class UnixEpochDateTimeConverter : JsonConverter<DateTime>
     {
@@ -28,7 +29,7 @@ namespace PowerShellLibrary.Converters
 
             return !match.Success || !long.TryParse(match.Groups[1].Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out long unixTime) ?
                 throw new JsonException() :
-                epochDateTime.AddMilliseconds(unixTime);
+                epochDateTime.AddMilliseconds(unixTime).ToLocalTime();
         }
 
         public override void Write(Utf8JsonWriter writer, DateTime value, JsonSerializerOptions options)
