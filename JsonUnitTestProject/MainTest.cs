@@ -5,6 +5,7 @@ using JsonUnitTestProject.Base;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PowerShellLibrary.Classes;
 using PowerShellLibrary.Converters;
+using PowerShellLibrary.LanguageExtensions;
 
 namespace JsonUnitTestProject
 {
@@ -47,8 +48,8 @@ namespace JsonUnitTestProject
                 0);
 
             var result = DateTime.Compare(
-                RemoveMillisecondsAndSeconds(cdi.OsLocalDateTime), 
-                RemoveMillisecondsAndSeconds(DateTime.Now));
+                cdi.OsLocalDateTime.RemoveMillisecondsAndSeconds(), 
+                DateTime.Now.RemoveMillisecondsAndSeconds());
             
             Assert.AreEqual(result,0, 
                 "Expected UnixEpochDateTime to equal DateTime.Now");

@@ -27,15 +27,10 @@ namespace JsonUnitTestProject
             TimeSpan.FromMilliseconds(GetTickCount64());
         
         public static DateTime Now => 
-            new(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
+            new(
+                DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, 0);
 
-        public static DateTime RemoveMilliseconds(DateTime dateTime) =>
-            ParseExact(dateTime.ToString("yyyy-MM-dd HH:mm:ss"), "yyyy-MM-dd HH:mm:ss", null);
-        public static DateTime RemoveSeconds(DateTime dateTime) =>
-            ParseExact(dateTime.ToString("yyyy-MM-dd HH:mm"), "yyyy-MM-dd HH:mm", null);
 
-        public static DateTime RemoveMillisecondsAndSeconds(DateTime dateTime) =>
-            ParseExact(dateTime.ToString("yyyy-MM-dd HH:mm"), "yyyy-MM-dd HH:mm", null);
     }
 
 }
