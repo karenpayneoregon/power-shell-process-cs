@@ -13,7 +13,7 @@ namespace JsonUnitTestProject
     public partial class MainTest : TestBase
     {
         /// <summary>
-        /// Validate returning date information using <seealso cref="UnixEpochDateTimeConverter"/> converter from Microsoft
+        /// Validate returning date information using <seealso cref="UnixEpochLocalDateTimeConverter"/> converter from Microsoft
         /// </summary>
         /// <returns></returns>
         [TestMethod]

@@ -19,7 +19,7 @@ namespace PowerShellLibrary.Classes
 		/// <returns>single instance of TModel</returns>
 		public static TModel DeserializeObject<TModel>(string json) => JsonSerializer.Deserialize<TModel>(json);
 		/// <summary>
-		/// Deserialize from Json string to TModel using <see cref="UnixEpochDateTimeConverter"/>
+		/// Deserialize from Json string to TModel using <see cref="UnixEpochLocalDateTimeConverter"/>
 		/// </summary>
         /// <typeparam name="TModel">Type to deserialize Json to</typeparam>
         /// <param name="json">Valid json for deserialize TModel too.</param>
@@ -28,7 +28,7 @@ namespace PowerShellLibrary.Classes
         {
 
             JsonSerializerOptions options = new();
-            options.Converters.Add(new UnixEpochDateTimeConverter());
+            options.Converters.Add(new UnixEpochLocalDateTimeConverter());
 			
             return JsonSerializer.Deserialize<TModel>(json, options);
 
@@ -44,7 +44,7 @@ namespace PowerShellLibrary.Classes
 		{
 
 			JsonSerializerOptions options = new();
-			options.Converters.Add(new UnixEpochDateTimeConverter());
+			options.Converters.Add(new UnixEpochLocalDateTimeConverter());
 
 			return JsonSerializer.Deserialize<List<TModel>>(json);
 
