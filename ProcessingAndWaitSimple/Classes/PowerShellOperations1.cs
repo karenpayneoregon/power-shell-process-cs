@@ -153,6 +153,45 @@ namespace ProcessingAndWait.Classes
 
         }
 
+        public static async Task<int> GetWindowsReleaseIdentifier()
+        {
+            var result = 0;
+            // 
+            const string fileName = "win.txt";
+
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
+
+            var start = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                RedirectStandardOutput = true,
+                Arguments = "(Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" -Name ReleaseID).ReleaseId",
+                CreateNoWindow = true
+            };
+
+            using (var process = Process.Start(start))
+            {
+                process.EnableRaisingEvents = true;
+                
+                using (var reader = process.StandardOutput)
+                {
+                    var fileContents = await reader.ReadToEndAsync();
+
+                    await File.WriteAllTextAsync(fileName, fileContents);
+                    await process.WaitForExitAsync();
+                    var json = await File.ReadAllTextAsync(fileName);
+                    Console.WriteLine();
+                }
+                
+            }
+            
+
+            return result;
+        }
+
         /// <summary>
         /// Removed 'mark of the web' from all files in a folder recursively 
         /// </summary>

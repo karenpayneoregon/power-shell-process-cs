@@ -18,11 +18,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerShellNuGet", "PowerShe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test", "Unit test", "{139344A1-EADA-43C6-AF02-37E0FBC224EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonUnitTestProject", "JsonUnitTestProject\JsonUnitTestProject.csproj", "{14EE8C4D-4184-4B41-9176-256E3F194D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonUnitTestProject", "JsonUnitTestProject\JsonUnitTestProject.csproj", "{14EE8C4D-4184-4B41-9176-256E3F194D5C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class projects", "{E8AC13F0-9051-427F-A9B0-7C364FCA62EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerShellLibrary", "PowerShellLibrary\PowerShellLibrary.csproj", "{08F549BE-3027-42FC-AB6F-D48289A1123F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerShellLibrary", "PowerShellLibrary\PowerShellLibrary.csproj", "{08F549BE-3027-42FC-AB6F-D48289A1123F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

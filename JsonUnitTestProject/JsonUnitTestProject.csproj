@@ -19,9 +19,15 @@
 
 	<ItemGroup>
 	  <Reference Include="System.Diagnostics.PerformanceCounter">
-	    <HintPath>..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.PerformanceCounter.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.PerformanceCounter.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
+
+	<!--<ItemGroup>
+	  <Reference Include="System.Diagnostics.PerformanceCounter">
+	    <HintPath>..\..\..\..\..\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\5.0.0\ref\net5.0\System.Diagnostics.PerformanceCounter.dll</HintPath>
+	  </Reference>
+	</ItemGroup>-->
 
 	<ItemGroup>
 	  <None Update="computerDateInfo.json">
