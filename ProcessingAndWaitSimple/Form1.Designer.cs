@@ -54,6 +54,7 @@ namespace ProcessingAndWait
             this.FilesListBox = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UnblockFolderButton = new System.Windows.Forms.Button();
+            this.OfficeStatusButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -309,11 +310,22 @@ namespace ProcessingAndWait
             this.UnblockFolderButton.UseVisualStyleBackColor = true;
             this.UnblockFolderButton.Click += new System.EventHandler(this.UnblockFolderButton_Click);
             // 
+            // OfficeStatusButton
+            // 
+            this.OfficeStatusButton.Location = new System.Drawing.Point(408, 213);
+            this.OfficeStatusButton.Name = "OfficeStatusButton";
+            this.OfficeStatusButton.Size = new System.Drawing.Size(175, 23);
+            this.OfficeStatusButton.TabIndex = 12;
+            this.OfficeStatusButton.Text = "Is Office  licensed";
+            this.OfficeStatusButton.UseVisualStyleBackColor = true;
+            this.OfficeStatusButton.Click += new System.EventHandler(this.OfficeStatusButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 628);
+            this.Controls.Add(this.OfficeStatusButton);
             this.Controls.Add(this.UnblockFolderButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.FilesListBox);
@@ -367,6 +379,7 @@ namespace ProcessingAndWait
         private System.Windows.Forms.ListBox FamilyListBox;
         private System.Windows.Forms.Button GetIpAddressVersion3Button;
         private System.Windows.Forms.Button UnblockFolderButton;
+        private System.Windows.Forms.Button OfficeStatusButton;
     }
 }
 

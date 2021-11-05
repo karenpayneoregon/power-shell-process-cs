@@ -273,5 +273,30 @@ namespace ProcessingAndWait
         {
             PowerShellOperations1.UnblockFiles("C:\\OED\\DataValidationWindowsForms1");
         }
+
+        /// <summary>
+        /// Not PowerShell yet follows the same pattern to get information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void OfficeStatusButton_Click(object sender, EventArgs e)
+        {
+            var result = await PowerShellOperations.OfficeStatusAsync();
+            if (result == "Directory not found")
+            {
+                MessageBox.Show("Incorrect folder");
+                return;
+            }
+
+            if (result.Contains("LICENSE STATUS:  ---LICENSED---"))
+            {
+                MessageBox.Show("Good to go");
+            }
+            else
+            {
+                MessageBox.Show("Licence expired");
+            }
+
+        }
     }
 }

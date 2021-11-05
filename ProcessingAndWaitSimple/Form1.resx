@@ -57,36 +57,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-  <data name="GetIpAddressVersion1Button.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GetIpAddressVersion1Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="GetIpAddressVersion2Button.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GetIpAddressVersion2Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="GetIpAddressVersion3Button.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GetIpAddressVersion3Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="AddressFamilyButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddressFamilyButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAADVJREFUOE9jGAUQ8O3bt//kYrgBTk5OJGMMAz68/0g0pq0BxLKp7wJSMYoB5GKw
         ASMaMDAAAOC9gJpoAU78AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="GetApplicationEventsJsonButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GetApplicationEventsJsonButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAASRJREFUOE+tkT2Kg0AYhnMBc4w0br99GhG1FGwkhQeINrZ2prLWFKayyQG2Ec9g
@@ -97,7 +97,7 @@
         G+cCYPEL5Yvlbtl+h/kAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="GetServicesHtmlButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GetServicesHtmlButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
         DwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAAKOWlDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
@@ -149,7 +149,7 @@
         AQDB0qTXZTC5oAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="GetServicesAsJsonButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="GetServicesAsJsonButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAASRJREFUOE+tkT2Kg0AYhnMBc4w0br99GhG1FGwkhQeINrZ2prLWFKayyQG2Ec9g
@@ -160,7 +160,7 @@
         G+cCYPEL5Yvlbtl+h/kAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="RunScriptButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RunScriptButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAMRJREFUOE/Fk80KgzAQhHP2sXIUNC9Y7/URQquPVO0hyXG7s8UQdPGHHhoYRHbm
@@ -169,7 +169,7 @@
         BECoaRqZFe3bAPIVyiOvVbZvDTj7G+f2sb5hY8wHkEPWzqpufy0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="TimeZoneButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TimeZoneButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAPFJREFUOE+lk8ENgzAMRZmg27AABw6cGIBx2IAbZyZgBqqWKWhZoO2FAxc3jxoJ
@@ -179,7 +179,7 @@
         yoSaHPtMy3DFH75zELwB3Zzaj6Zt3rYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ComputerInformationButton.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ComputerInformationButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAIBJREFUOE9j+P79uwIDJeDbt2/vv3z5YgDlkg6ABvynyBCQASkpKf9fv379H+id
@@ -187,7 +187,7 @@
         gKJYoDgdADFFKZGyvEBxbqQMMDAAAEIdD1uGIK1pAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="OpenExecutableFolder.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="OpenExecutableFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAAGdJREFUOE9j+P//P0WY4du3b+eB+D8B/B6IBRjQANiAz++e/7+zrQovfnPvBMiQ
@@ -195,7 +195,7 @@
         bF2em40AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAALBJREFUOE/NkDEOAiEQRTmCZ6LnAPSchZ6eO3gEa+6htlTQrj6SIbssm6jRRJIf
@@ -204,7 +204,7 @@
         WnwyeG3pO0epB30boFwhu7LdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEAwAAAEAIABYAwAAFgAAACgAAAAQAAAAGAAAAAEAIAAAAAAAMAMAABMLAAATCwAAAAAAAAAA
         AAC3gULAvX42/Ll9N/u5ey/7uXww+7h8Nvu2eTH7tncr+7d4LPu2dyv7tXYs+7p9NvzAgzrouIVJRP//

@@ -63,6 +63,55 @@ namespace ProcessingAndWait.Classes
         }
 
         /// <summary>
+        /// Determine if Office is licensed w/o PowerShell
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<string> OfficeStatusAsync()
+        {
+
+            return await Task.Run(async () =>
+            {
+                const string fileName = "office.txt";
+
+                // before running validate this path
+                const string workingFolder = @"C:\Program Files\Microsoft Office\Office16";
+
+                if (!Directory.Exists(workingFolder))
+                {
+                    return "Directory not found";
+                }
+
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                }
+
+                var start = new ProcessStartInfo
+                {
+                    FileName = "cscript.exe",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    Arguments = "ospp.vbs /dstatus",
+                    CreateNoWindow = true,
+                    WorkingDirectory = workingFolder
+                };
+                
+                using var process = Process.Start(start);
+                using var reader = process.StandardOutput;
+
+                process.EnableRaisingEvents = true;
+
+                var result = await reader.ReadToEndAsync();
+
+                await File.WriteAllTextAsync(fileName, result);
+                await process.WaitForExitAsync();
+
+                return await File.ReadAllTextAsync(fileName);
+
+            });
+        }
+
+        /// <summary>
         /// Get this computer's IP address asynchronous 
         /// </summary>
         /// <returns>Task&lt;string&gt;</returns>        
